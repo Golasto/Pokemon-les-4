@@ -34,11 +34,15 @@ export default function Pokemon({name}) {
             getAbilities()
             return(
                 <>
+                    <div className="pokemonContainer">
+                    <div className="pokemonCard">
                     <h1>{data.forms[0].name}</h1>
                     <img src={data.sprites.other['official-artwork'].front_default} alt="" />
                     <h2>Abilities: {abilities}</h2>
                     <p>Weight: {data.weight}</p>
                     <p>Moves: {moves}</p>
+                    </div>
+                    </div>
                 </>
             )
         }else {

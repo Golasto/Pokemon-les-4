@@ -54,9 +54,10 @@ function App() {
         if (data.length !== 0) {
             return (
                 <>
-                    <div>
-                        <button id="p" onClick={() => changePokemon(false)}>Previous</button>
-                        <button id="n" onClick={() => changePokemon(true)}>Next</button>
+                    <button id="p" onClick={() => changePokemon(false)}>Previous</button>
+                    <button id="n" onClick={() => changePokemon(true)}>Next</button>
+                    <div className="pokemonData">
+
                         {data.map(d =>
                             <Pokemon key={d.name} name={d.name} />
                         )}
