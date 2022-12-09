@@ -38,6 +38,10 @@ body{
     background-color: grey;
     display: flex;
     justify-content: center;
+    background-image: url("./imgs/pokemonwallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
 }
 .pokemonContainer{
     margin: 0 auto;
@@ -50,10 +54,23 @@ body{
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
-    background-color: white;
-    border: 10px solid #b90d0d;
+    background-color: #2d2d2d;
+    border: 10px double white;
     margin: 1rem;
     border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.pokemonCard:hover{
+animation: thing 8s infinite;
+    background-color: white;
+    border: 10px solid #b90d0d;
+}
+@keyframes thing {
+0%{transform: rotate(0deg)}
+    2%{transform: rotate(-2deg)}
+    3%{transform: rotate(2deg)}
+    4%{transform: rotate(0deg)}
+    100%{transform: rotate(0deg)}
 }
 .pokemonData{
     flex-wrap: wrap;
@@ -70,7 +87,7 @@ img:hover{
 button{
     background-color: #b90d0d;
     padding: 1rem;
-    border: 5px solid #222224;
+    border: 5px solid #ffffff;
     border-radius: 1rem;
     transition: all 0.2s ease-in-out;
     margin: 0 1rem;
@@ -81,6 +98,7 @@ button{
 button:hover{
     color: #b90d0d;
 background-color: #f0f0f0;
+    border: 5px solid #b90d0d;
     transition: .3s;
     transform:scale(1.2);
 }
